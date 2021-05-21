@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.petdiary.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.example.petdiary.Fragment_register"
+        android:label="fragment_register2"
+        tools:layout="@layout/fragment_register2" >
+        <action
+            android:id="@+id/action_fragment_register_to_fragment_Menu"
+            app:destination="@id/fragment_Menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Menu"
+        android:name="com.example.petdiary.Fragment_Menu"
+        android:label="fragment__menu"
+        tools:layout="@layout/fragment__menu" >
+        <action
+            android:id="@+id/action_fragment_Menu_to_fragment_photos"
+            app:destination="@id/fragment_photos" />
+        <action
+            android:id="@+id/action_fragment_Menu_to_fragment_catlist"
+            app:destination="@id/fragment_catlist" />
+        <action
+            android:id="@+id/action_fragment_Menu_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_photos"
+        android:name="com.example.petdiary.Fragment_photos"
+        android:label="fragment_photos"
+        tools:layout="@layout/fragment_photos" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.petdiary.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/fragment_catlist"
+        android:name="com.example.petdiary.Fragment_catlist"
+        android:label="fragment_catlist"
+        tools:layout="@layout/fragment_catlist" >
+        <action
+            android:id="@+id/action_fragment_catlist_to_fragment_result"
+            app:destination="@id/fragment_result" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_result"
+        android:name="com.example.petdiary.Fragment_result"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/fragment_Login"
+        android:name="com.example.petdiary.Fragment_Login"
+        android:label="fragment__login"
+        tools:layout="@layout/fragment__login" >
+        <action
+            android:id="@+id/action_fragment_Login_to_fragment_register"
+            app:destination="@id/fragment_register" />
+        <action
+            android:id="@+id/action_fragment_Login_to_fragment_Menu"
+            app:destination="@id/fragment_Menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_pager"
+        android:name="com.example.petdiary.Fragment_pager"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_pager" />
+    <fragment
+        android:id="@+id/image_card"
+        android:name="com.example.petdiary.image_card"
+        android:label="fragment_image_card"
+        tools:layout="@layout/fragment_image_card" />
+</navigation>

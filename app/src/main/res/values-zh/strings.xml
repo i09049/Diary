@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Pet Diary</string>
+    <string name="textName">User Name</string>
+    <string name="textPassword">Password</string>
+    <string name="textLogin">Login</string>
+    <string name="textSignUp">Sign Up</string>
+    <string name="textLoginName">LoginName</string>
+    <string name="textLoginPassword">LoginPassword</string>
+    <string name="textConfirmPassword">ConfirmPassword</string>
+    <string name="image_description">Image</string>
+
+    <string-array name="catNames">
+        <item>暹羅貓</item>
+        <item>波斯貓</item>
+        <item>緬因貓</item>
+        <item>布偶貓</item>
+        <item>英國短毛貓</item>
+        <item>阿比西尼亞貓</item>
+        <item>蘇格蘭摺耳貓</item>
+        <item>孟加拉貓</item>
+    </string-array>
+
+
+
+</resources>
