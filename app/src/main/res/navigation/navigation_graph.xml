@@ -38,7 +38,11 @@
         android:id="@+id/fragment_photos"
         android:name="com.example.petdiary.Fragment_photos"
         android:label="fragment_photos"
-        tools:layout="@layout/fragment_photos" />
+        tools:layout="@layout/fragment_photos" >
+        <action
+            android:id="@+id/action_fragment_photos_to_activityUpload"
+            app:destination="@id/activityUpload" />
+    </fragment>
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.example.petdiary.MapsFragment"
@@ -92,4 +96,9 @@
             android:id="@+id/action_fragment_done_to_fragment_Menu"
             app:destination="@id/fragment_Menu" />
     </fragment>
+    <activity
+        android:id="@+id/activityUpload"
+        android:name="com.example.petdiary.ActivityUpload"
+        android:label="activity_upload"
+        tools:layout="@layout/activity_upload" />
 </navigation>

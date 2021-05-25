@@ -9,6 +9,10 @@
     <string name="textConfirmPassword">ConfirmPassword</string>
     <string name="image_description">Image</string>
     <string name="tvResult">Sign in Sucessfully</string>
+    <string name="button_choose_image">Choose file</string>
+    <string name="edit_text_file_name">Enter file name</string>
+    <string name="btton_upload">Upload</string>
+    <string name="text_view_show_uploads">Show Uploads</string>
 
     <string-array name="catNames">
         <item>暹羅貓</item>
