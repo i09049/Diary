@@ -15,14 +15,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.petdiary.MainActivity;
 import com.example.petdiary.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
+import com.example.petdiary.data.GridAdapter.ImageViewHolder;
+import com.example.petdiary.fragment.Fragment_pager;
 
-import java.lang.annotation.Target;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import javax.sql.DataSource;
+//import javax.sql.DataSource;
 
-public class GridAdapter<RequestManager> extends RecyclerView.Adapter<GridAdapter.ImageViewHolder> {
+public class GridAdapter extends RecyclerView.Adapter<ImageViewHolder> {
 
 
     private interface ViewHolderListener {
@@ -36,8 +44,8 @@ public class GridAdapter<RequestManager> extends RecyclerView.Adapter<GridAdapte
     private final ViewHolderListener viewHolderListener;
 
 
-    public GridAdapter(LocalDate glide, Fragment fragment) {
-        this.requestManager = (RequestManager) glide.with(fragment);
+    public GridAdapter(Fragment fragment) {
+        this.requestManager = Glide.with(fragment);
         this.viewHolderListener = new ViewHolderListenerImpl(fragment);
     }
 
@@ -98,7 +106,7 @@ public class GridAdapter<RequestManager> extends RecyclerView.Adapter<GridAdapte
                     .beginTransaction()
                     .setReorderingAllowed(true) // Optimize for shared element transition
                     .addSharedElement(transitioningView, transitioningView.getTransitionName())
-                    .replace(R.id.fragment_container, new pager(), pager.class
+                    .replace(R.id.fragment_container, new Fragment_pager(), Fragment_pager.class
                             .getSimpleName())
                     .addToBackStack(null)
                     .commit();
@@ -109,7 +117,7 @@ public class GridAdapter<RequestManager> extends RecyclerView.Adapter<GridAdapte
     static class ImageViewHolder extends RecyclerView.ViewHolder implements
             View.OnClickListener {
 
-        private static final android.R.attr R = ;
+
         private final ImageView image;
         private final RequestManager requestManager;
         private final ViewHolderListener viewHolderListener;

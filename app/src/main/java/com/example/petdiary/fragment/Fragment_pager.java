@@ -1,4 +1,4 @@
-package com.example.petdiary;
+package com.example.petdiary.fragment;
 
 import android.app.SharedElementCallback;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.petdiary.MainActivity;
+import com.example.petdiary.R;
 import com.example.petdiary.data.pager;
 
 import java.util.List;

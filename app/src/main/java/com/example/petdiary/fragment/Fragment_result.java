@@ -1,13 +1,11 @@
-package com.example.petdiary;
+package com.example.petdiary.fragment;
 
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,13 +17,13 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.example.petdiary.R;
 
 
-import java.lang.annotation.Target;
-import java.time.Instant;
-import java.time.temporal.TemporalAdjuster;
+//import java.lang.annotation.Target;
 
-import javax.sql.DataSource;
+
+//import javax.sql.DataSource;
 
 
 public class Fragment_result extends Fragment {
@@ -41,7 +39,7 @@ public class Fragment_result extends Fragment {
         return fragment;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -60,7 +58,7 @@ public class Fragment_result extends Fragment {
                 .load(imageRes)
                 .listener(new RequestListener<Drawable>() {
                     @Override
-                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable>
                             target, boolean isFirstResource) {
                         // The postponeEnterTransition is called on the parent ImagePagerFragment, so the
                         // startPostponedEnterTransition() should also be called on it to get the transition

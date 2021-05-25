@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.petdiary.Fragment_result;
+import com.example.petdiary.fragment.Fragment_result;
 
 public class pager extends FragmentStatePagerAdapter {
 

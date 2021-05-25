@@ -1,19 +1,19 @@
-package com.example.petdiary;
+package com.example.petdiary.fragment;
 
 import android.app.SharedElementCallback;
 import android.os.Bundle;
+import android.transition.TransitionInflater;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.transition.TransitionInflater;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnLayoutChangeListener;
-import android.view.ViewGroup;
-
+import com.example.petdiary.MainActivity;
+import com.example.petdiary.R;
 import com.example.petdiary.data.GridAdapter;
 
 import java.util.List;

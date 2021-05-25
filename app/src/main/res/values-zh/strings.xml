@@ -8,6 +8,7 @@
     <string name="textLoginPassword">LoginPassword</string>
     <string name="textConfirmPassword">ConfirmPassword</string>
     <string name="image_description">Image</string>
+    <string name="tvResult">Sign in Sucessfully</string>
 
     <string-array name="catNames">
         <item>暹羅貓</item>
